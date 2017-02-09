@@ -164,8 +164,8 @@ namespace YALV.ViewModel
             using (System.Windows.Forms.OpenFileDialog dlg = new System.Windows.Forms.OpenFileDialog())
             {
                 bool addFile = parameter != null && parameter.Equals("ADD");
-                dlg.Filter = String.Format("{0} (*.xml)|*.xml|{1} (*.*)|*.*", Properties.Resources.MainWindowVM_commandOpenFileExecute_XmlFilesCaption, Properties.Resources.MainWindowVM_commandOpenFileExecute_AllFilesCaption);
-                dlg.DefaultExt = "xml";
+                dlg.Filter = String.Format("{0} (*.xml;*.xmllog)|*.xml;*.xmllog|{1} (*.*)|*.*", Properties.Resources.MainWindowVM_commandOpenFileExecute_XmlFilesCaption, Properties.Resources.MainWindowVM_commandOpenFileExecute_AllFilesCaption);
+                dlg.DefaultExt = "xmllog";
                 dlg.Multiselect = true;
                 dlg.Title = addFile ? Resources.MainWindowVM_commandOpenFileExecute_Add_Log_File : Resources.MainWindowVM_commandOpenFileExecute_Open_Log_File;
 
